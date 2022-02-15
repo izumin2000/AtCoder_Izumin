@@ -1,0 +1,89 @@
+{
+	"cond": {
+		"prefix": "cond",
+		"body": [
+			"cond = $1",
+			"print('Yes' if cond else 'No')",
+		],
+	},
+
+	"zyouken": {
+		"prefix": "zyouken",
+		"body": [
+			"cond = $1",
+			"print('Yes' if cond else 'No')",
+		],
+	},
+
+	"inpn": {
+		"prefix": "n",
+		"body": [
+			"n = int(input())",
+		],
+	},
+
+	"inps": {
+		"prefix": "s",
+		"body": [
+			"s = input()",
+		],
+	},
+
+	"inpl": {
+		"prefix": "l",
+		"body": [
+			"$1 = []",
+		],
+	},
+
+	"map": {
+		"prefix": "map",
+		"body": [
+			"$1 = map(int, input().split())",
+		],
+	},
+
+	"mapl": {
+		"prefix": "mapl",
+		"body": [
+			"$1 = list(map(int, input().split()))",
+		],
+	},
+
+	"np": {
+		"prefix": "np",
+		"body": [
+			"import numpy as np",
+		],
+	},
+
+	"npmapl": {
+		"prefix": "npmapl",
+		"body": [
+			"$1 = np.array(list(map(int, input().split())))",
+		],
+	},
+
+	"npunique": {
+		"prefix": "npunique",
+		"body": [
+			"u, counts = np.unique($1, return_counts=True)",
+		],
+	},
+
+	"pridebag": {
+		"prefix": "pridebag",
+		"body": [
+			"############",
+			"print('DEBAG!!', $1)",
+			"############",
+		],
+	},
+
+	"rangen": {
+		"prefix": "rangen",
+		"body": [
+			"for %1 in range(n)",
+		],
+	},
+}
