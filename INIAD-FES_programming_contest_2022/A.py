@@ -1,0 +1,1 @@
+print(input() + "@iniad.ed.jp")

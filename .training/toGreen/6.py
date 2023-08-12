@@ -1,0 +1,1 @@
+print("".join([chr(p+96) for p in list(map(int, input().split()))]))

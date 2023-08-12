@@ -1,50 +1,66 @@
 {
 	"cond": {
-		"prefix": "cond",
+		"prefix": [
+			"cccc",
+			"cond",
+			"zyouken",
+		],
 		"body": [
 			"cond = $1",
 			"print('Yes' if cond else 'No')",
 		],
 	},
 
-	"zyouken": {
-		"prefix": "zyouken",
+	"pppp": {
+		"prefix": [
+			"p",
+			"pppp",
+		],
 		"body": [
-			"cond = $1",
-			"print('Yes' if cond else 'No')",
+			"print($1)",
 		],
 	},
 
-	"inpn": {
-		"prefix": "n",
+	"intinput": {
+		"prefix": [
+			"n",
+			"nnnn",
+			"intinput",
+			"inputn",
+		],
 		"body": [
-			"n = int(input())",
+			"$1 = int(input())",
 		],
 	},
 
-	"inps": {
-		"prefix": "s",
+	"strinput": {
+		"prefix": [
+			"s",
+			"ssss",
+			"strinput",
+		],
 		"body": [
 			"s = input()",
 		],
 	},
 
-	"inpl": {
-		"prefix": "l",
-		"body": [
-			"$1 = []",
-		],
-	},
-
 	"map": {
-		"prefix": "map",
+		"prefix": [
+			"map",
+			"mmmm",
+		],
 		"body": [
 			"$1 = map(int, input().split())",
 		],
 	},
 
-	"mapl": {
-		"prefix": "mapl",
+	"listmap": {
+		"prefix": [
+			"m",
+			"mapl",
+			"llll",
+			"listmap",
+		],
 		"body": [
 			"$1 = list(map(int, input().split()))",
 		],
@@ -71,19 +87,62 @@
 		],
 	},
 
-	"pridebag": {
-		"prefix": "pridebag",
+	"printdebag": {
+		"prefix": [
+			"dddd",
+			"debug",
+			"printdebag",
+		],
 		"body": [
-			"############",
-			"print('DEBAG!!', $1)",
-			"############",
+			"print(f\"\\033[31m{$1}\\033[0m\")"
 		],
 	},
 
 	"rangen": {
-		"prefix": "rangen",
+		"prefix": [
+			"rangen",
+			"rrrr",
+		],
 		"body": [
-			"for %1 in range(n)",
+			"for $1 in range(n) :",
+		],
+	},
+
+	"counter": {
+		"prefix": "counter",
+		"body": [
+			"# import collections",
+			"d = collections.Counter($1)",
+			"for k, v in d.items() :",
+			"\t$2",
+		],
+	},
+
+	"pickuptwo": {
+		"prefix": [
+			"pickup2",
+			"pair",
+			"kumiawase",
+			"comb",
+		],
+		"body": [
+			"# import itertools",
+			"for pair in itertools.combinations($1, 2) :",
+			"\t$2",
+		],
+	},
+
+	"exit": {
+		"prefix": [
+			"teishi",
+			"teisi",
+			"exit",
+			"eeee",
+			"quit",
+		],
+		"body": [
+			"# import sys",
+			"sys.exit()",
 		],
 	},
 }
